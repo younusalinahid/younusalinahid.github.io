@@ -17,8 +17,7 @@
     <meta name="twitter:description" content="Backend & Full Stack Developer">
     <meta name="twitter:image" content="https://younusalinahid.github.io/avatar.jpg">
     <meta name="theme-color" content="#0D1017">
-    <link rel="icon"
-        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230D1017'/%3E%3Ctext x='50' y='68' font-size='55' font-family='Arial,sans-serif' font-weight='700' fill='%235B8DEF' text-anchor='middle'%3EY%3C/text%3E%3C/svg%3E">
+    <link rel="icon" href="avatar.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap"
@@ -750,6 +749,12 @@
             font-size: 18px;
         }
 
+        .proj-links {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
         .proj-link {
             font-size: 12.5px;
             color: var(--blue);
@@ -1009,6 +1014,7 @@
                             <span class="stack-pill">Angular</span>
                             <span class="stack-pill">React</span>
                             <span class="stack-pill">MySQL</span>
+                            <span class="stack-pill">AWS</span>
                             <span class="stack-pill">Docker</span>
                         </div>
                     </div>
@@ -1052,8 +1058,7 @@
                     <div class="about-card">
                         <div class="icon icon-violet">🎓</div>
                         <h3>Currently</h3>
-                        <p>B.Sc. in CSE at Dhaka International University, graduating August 2026, alongside full-time
-                            engineering work.</p>
+                        <p>B.Sc. in CSE at Dhaka International University, graduating August 2026.</p>
                     </div>
                 </div>
             </div>
@@ -1073,28 +1078,34 @@
                         <div class="tl-card">
                             <div class="tl-head">
                                 <div>
-                                    <div class="tl-role">Software Engineer</div>
+                                    <div class="tl-role">Full Stack Software Engineer</div>
                                     <div class="tl-company"><a href="https://avanto-vr.com/en/" target="_blank"
                                             rel="noopener" style="color:inherit;">Avanto VR Solution GmbH ↗</a></div>
                                 </div>
                                 <div class="tl-meta">Aug 2024 — Present · Remote</div>
                             </div>
                             <ul>
-                                <li>Develop and maintain scalable backend services using Spring Boot.</li>
-                                <li>Designed and implemented the ESYSYNC dashboard for 3,000+ customers, improving
-                                    usability and overall user experience.</li>
+                                <li>Owned end-to-end development of a new microservice, building 15+ REST APIs powering
+                                    iOS and Android apps for 300+ customers.</li>
+                                <li>Cut media upload API latency from ~1 minute to 5–10 seconds by migrating storage
+                                    from local disk to Amazon S3, an 80% performance boost.</li>
+                                <li>Built the service using the MVC pattern with Hibernate and Flyway, enabling
+                                    zero-downtime database migrations in production.</li>
+                                <li>Decomposed a monolithic service into microservices to reliably handle
+                                    production-scale traffic.</li>
+                                <li>Designed the ESYSYNC dashboard for 3,000+ customers with real-time monitoring and
+                                    improved UI using Angular.</li>
+                                <li>Built customer routing and real-time location heartbeat features end-to-end for
+                                    enhanced tracking and system monitoring.</li>
+                                <li>Developed FEELESTATE, an AI-powered interior design feature, end-to-end across both
+                                    frontend and backend.</li>
                                 <li>Implemented background jobs with Spring Scheduler for automation and system
                                     efficiency.</li>
-                                <li>Built customer routing and real-time location heartbeat features for tracking and
-                                    system monitoring.</li>
-                                <li>Developed FEELESTATE, an AI-powered interior design feature, across both frontend
-                                    and backend.</li>
-                                <li>Contributed to frontend development in Angular, improving UI responsiveness and user
-                                    experience.</li>
                             </ul>
                             <div class="tl-tags">
                                 <span class="tl-tag">Spring Boot</span><span class="tl-tag">Angular</span><span
-                                    class="tl-tag">Spring Scheduler</span><span class="tl-tag">REST API</span>
+                                    class="tl-tag">AWS S3</span><span class="tl-tag">Flyway</span><span
+                                    class="tl-tag">REST API</span>
                             </div>
                         </div>
                     </div>
@@ -1115,15 +1126,20 @@
                     <div class="proj-card">
                         <div class="proj-top">
                             <div class="proj-title">ShopSpot E-commerce</div>
-                            <a class="proj-link" href="https://github.com/younusalinahid/shopspot-ecommerce"
-                                target="_blank" rel="noopener">View repo ↗</a>
+                            <div class="proj-links">
+                                <a class="proj-link" href="https://shopspot-online.onrender.com/" target="_blank"
+                                    rel="noopener">Live Demo ↗</a>
+                                <a class="proj-link" href="https://github.com/younusalinahid/shopspot-ecommerce"
+                                    target="_blank" rel="noopener">Code ↗</a>
+                            </div>
                         </div>
                         <div class="proj-desc">Full-stack AI-powered e-commerce app with product management, cart,
                             checkout, and JWT auth.</div>
                         <ul>
-                            <li>AI chatbot for customer assistance and product queries</li>
-                            <li>Personalized recommendations from browsing and purchase history</li>
-                            <li>AI image search for visually similar products</li>
+                            <li>AI-powered search, product recommendations, and chatbot for smarter product discovery
+                            </li>
+                            <li>JWT-based authentication with role-based access control</li>
+                            <li>Stock-warning alerts and review sentiment analysis</li>
                         </ul>
                         <div class="proj-tags">
                             <span class="proj-tag">Spring Boot</span><span class="proj-tag">React</span><span
@@ -1133,9 +1149,35 @@
 
                     <div class="proj-card">
                         <div class="proj-top">
+                            <div class="proj-title">ProLens Real Estate Platform</div>
+                            <div class="proj-links">
+                                <a class="proj-link" href="https://proplens-real-estate-platform-fwtx.vercel.app/"
+                                    target="_blank" rel="noopener">Live Demo ↗</a>
+                                <a class="proj-link"
+                                    href="https://github.com/younusalinahid/proplens-real-estate-platform"
+                                    target="_blank" rel="noopener">Code ↗</a>
+                            </div>
+                        </div>
+                        <div class="proj-desc">Frontend-only real estate platform with searchable, filterable property
+                            listings and interactive map exploration.</div>
+                        <ul>
+                            <li>Interactive map exploration via Leaflet</li>
+                            <li>Property comparison and market-insight tools using Zustand and Recharts</li>
+                            <li>Type-safe, responsive UI deployed on Vercel with Vite</li>
+                        </ul>
+                        <div class="proj-tags">
+                            <span class="proj-tag">React</span><span class="proj-tag">TypeScript</span><span
+                                class="proj-tag">Vite</span><span class="proj-tag">Tailwind CSS</span>
+                        </div>
+                    </div>
+
+                    <div class="proj-card">
+                        <div class="proj-top">
                             <div class="proj-title">Student Result System</div>
-                            <a class="proj-link" href="https://github.com/younusalinahid/student-result-system"
-                                target="_blank" rel="noopener">View repo ↗</a>
+                            <div class="proj-links">
+                                <a class="proj-link" href="https://github.com/younusalinahid/student-result-system"
+                                    target="_blank" rel="noopener">Code ↗</a>
+                            </div>
                         </div>
                         <div class="proj-desc">A grading management system with a schema for student records and
                             semester results, backed by unit tests.</div>
@@ -1148,8 +1190,10 @@
                     <div class="proj-card">
                         <div class="proj-top">
                             <div class="proj-title">E-commerce Application</div>
-                            <a class="proj-link" href="https://github.com/younusalinahid/e-commerce-application"
-                                target="_blank" rel="noopener">View repo ↗</a>
+                            <div class="proj-links">
+                                <a class="proj-link" href="https://github.com/younusalinahid/e-commerce-application"
+                                    target="_blank" rel="noopener">Code ↗</a>
+                            </div>
                         </div>
                         <div class="proj-desc">Secure REST APIs with pagination, sorting, and filtering, plus custom
                             exception handling and validation.</div>
@@ -1162,8 +1206,10 @@
                     <div class="proj-card">
                         <div class="proj-top">
                             <div class="proj-title">Global Exception Handling</div>
-                            <a class="proj-link" href="https://github.com/younusalinahid/global-exception-handling"
-                                target="_blank" rel="noopener">View repo ↗</a>
+                            <div class="proj-links">
+                                <a class="proj-link" href="https://github.com/younusalinahid/global-exception-handling"
+                                    target="_blank" rel="noopener">Code ↗</a>
+                            </div>
                         </div>
                         <div class="proj-desc">Centralized exception handling with custom exception classes and
                             consistent, structured error responses.</div>
@@ -1190,8 +1236,9 @@
                             <h3>Languages</h3>
                         </div>
                         <div class="skill-chips">
-                            <span class="skill-chip">Java</span><span class="skill-chip">JavaScript</span><span
-                                class="skill-chip">C</span><span class="skill-chip">SQL</span>
+                            <span class="skill-chip">Java</span><span class="skill-chip">Kotlin</span><span
+                                class="skill-chip">JavaScript</span><span class="skill-chip">C</span><span
+                                class="skill-chip">SQL</span>
                         </div>
                     </div>
                     <div class="skill-card">
@@ -1201,7 +1248,8 @@
                         <div class="skill-chips">
                             <span class="skill-chip">Spring Boot</span><span class="skill-chip">REST API</span><span
                                 class="skill-chip">JPA</span><span class="skill-chip">Hibernate</span><span
-                                class="skill-chip">React</span><span class="skill-chip">Angular</span>
+                                class="skill-chip">Flyway</span><span class="skill-chip">React</span><span
+                                class="skill-chip">Angular</span><span class="skill-chip">TypeScript</span>
                         </div>
                     </div>
                     <div class="skill-card">
@@ -1209,9 +1257,11 @@
                             <h3>Databases &amp; Tools</h3>
                         </div>
                         <div class="skill-chips">
-                            <span class="skill-chip">MySQL</span><span class="skill-chip">JUnit</span><span
-                                class="skill-chip">Mockito</span><span class="skill-chip">GitHub</span><span
-                                class="skill-chip">IntelliJ IDEA</span><span class="skill-chip">Docker</span>
+                            <span class="skill-chip">MySQL</span><span class="skill-chip">MariaDB</span><span
+                                class="skill-chip">AWS</span><span class="skill-chip">Azure</span><span
+                                class="skill-chip">JUnit</span><span class="skill-chip">Mockito</span><span
+                                class="skill-chip">GitHub</span><span class="skill-chip">IntelliJ IDEA</span><span
+                                class="skill-chip">Docker</span>
                         </div>
                     </div>
                 </div>
@@ -1234,7 +1284,7 @@
                     <div class="pe-card">
                         <div class="pe-label">Education</div>
                         <h3>B.Sc. in Computer Science and Engineering</h3>
-                        <p>Dhaka International University · Expected August 2026</p>
+                        <p>Dhaka International University · August 2026</p>
                     </div>
                 </div>
             </div>
@@ -1251,9 +1301,9 @@
                         <a class="contact-link" href="tel:+8801878772283"><span aria-hidden="true">☎</span> +880 1878
                             772 283</a>
                         <a class="contact-link" href="https://github.com/younusalinahid" target="_blank"
-                            rel="noopener"><span aria-hidden="true">⌘</span> GitHub</a>
+                            rel="noopener"><span aria-hidden="true">⌘</span> GitHub · 15+ Projects</a>
                         <a class="contact-link" href="https://leetcode.com/younusalinahid" target="_blank"
-                            rel="noopener"><span aria-hidden="true">◆</span> LeetCode</a>
+                            rel="noopener"><span aria-hidden="true">◆</span> LeetCode · 100+ Solved</a>
                         <a class="contact-link" href="https://www.linkedin.com/in/younus-ali-nahid-483202323/"
                             target="_blank" rel="noopener">
                             <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
