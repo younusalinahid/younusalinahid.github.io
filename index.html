@@ -701,6 +701,31 @@
             font-weight: 700;
         }
 
+        .tl-groups {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px 32px;
+        }
+
+        @media (max-width:800px) {
+            .tl-groups {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .tl-sub {
+            font-family: var(--display);
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+
+        .tl-card li strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
         .tl-tags {
             display: flex;
             flex-wrap: wrap;
@@ -1144,28 +1169,52 @@
                                 </div>
                                 <div class="tl-meta">Aug 2024 — Present · Remote</div>
                             </div>
-                            <ul>
-                                <li>Owned end-to-end development of a new microservice, building 15+ REST APIs powering
-                                    iOS and Android apps for 3,000+ customers.</li>
-                                <li>Cut media upload API latency from ~1 minute to 5–10 seconds by migrating storage
-                                    from local disk to Amazon S3, an 80% performance boost.</li>
-                                <li>Built the service using the MVC pattern with Hibernate and Flyway, enabling
-                                    zero-downtime database migrations in production.</li>
-                                <li>Decomposed a monolithic service into microservices to reliably handle
-                                    production-scale traffic.</li>
-                                <li>Designed the ESYSYNC dashboard for 3,000+ customers with real-time monitoring and
-                                    improved UI using Angular.</li>
-                                <li>Built customer routing and real-time location heartbeat features end-to-end for
-                                    enhanced tracking and system monitoring.</li>
-                                <li>Developed FEELESTATE, an AI-powered interior design feature, end-to-end across both
-                                    frontend and backend.</li>
-                                <li>Implemented background jobs with Spring Scheduler for automation and system
-                                    efficiency.</li>
-                            </ul>
+                            <div class="tl-groups">
+                                <div>
+                                    <div class="tl-sub">Backend &amp; Microservices</div>
+                                    <ul>
+                                        <li>Built a new microservice end to end.</li>
+                                        <li>Developed <strong>15+ REST APIs</strong> for the iOS and Android apps.</li>
+                                        <li>APIs serve <strong>3,000+ customers</strong> in production.</li>
+                                        <li>Split a monolithic backend into microservices.</li>
+                                        <li>Improved scalability and reliability under production traffic.</li>
+                                        <li>Designed REST APIs together with the team lead.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <div class="tl-sub">Performance &amp; Database</div>
+                                    <ul>
+                                        <li>Moved media storage from local disk to <strong>Amazon S3</strong>.</li>
+                                        <li>Upload time dropped from <strong>~1 min to 5–10 sec</strong> (80% faster).</li>
+                                        <li>Used Hibernate and Flyway for database access and migrations.</li>
+                                        <li>Ran <strong>zero-downtime</strong> schema migrations in production.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <div class="tl-sub">Features &amp; Automation</div>
+                                    <ul>
+                                        <li>Built customer routing features.</li>
+                                        <li>Built real-time location heartbeat tracking.</li>
+                                        <li>Automated background jobs with Spring Scheduler.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <div class="tl-sub">Key Products</div>
+                                    <ul>
+                                        <li><strong>ESYSYNC Dashboard:</strong> built in Angular for 3,000+ customers.</li>
+                                        <li>Added real-time monitoring and a cleaner UI to ESYSYNC.</li>
+                                        <li><strong>FEELESTATE:</strong> built an AI-powered interior design feature.</li>
+                                        <li>Handled both frontend and backend for FEELESTATE.</li>
+                                    </ul>
+                                </div>
+                            </div>
                             <div class="tl-tags">
-                                <span class="tl-tag">Spring Boot</span><span class="tl-tag">Angular</span><span
-                                    class="tl-tag">AWS S3</span><span class="tl-tag">Flyway</span><span
-                                    class="tl-tag">REST API</span>
+                                <span class="tl-tag">Kotlin</span><span class="tl-tag">Java</span><span
+                                    class="tl-tag">Spring Boot</span><span class="tl-tag">Hibernate</span><span
+                                    class="tl-tag">Flyway</span><span class="tl-tag">MySQL</span><span
+                                    class="tl-tag">MariaDB</span><span class="tl-tag">AWS S3</span><span
+                                    class="tl-tag">Docker</span><span class="tl-tag">Azure</span><span
+                                    class="tl-tag">Angular</span><span class="tl-tag">REST API</span>
                             </div>
                         </div>
                     </div>
