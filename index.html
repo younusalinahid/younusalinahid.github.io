@@ -19,7 +19,7 @@
     <meta property="og:url" content="https://younusalinahid.github.io/">
     <meta property="og:image" content="https://younusalinahid.github.io/avatar.jpg">
     <meta property="og:image:alt" content="Younus Ali Nahid">
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Younus Ali Nahid (Nahid) — Full Stack Software Engineer | Java, Spring Boot">
     <meta name="twitter:description" content="Younus Ali Nahid (Nahid) is a Full Stack Software Engineer from Bangladesh building Spring Boot APIs, microservices and Angular/React apps. Portfolio, projects and CV.">
     <meta name="twitter:image" content="https://younusalinahid.github.io/avatar.jpg">
@@ -27,6 +27,7 @@
     <link rel="icon" href="avatar.jpg">
     <link rel="apple-touch-icon" href="avatar.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap"
         rel="stylesheet">
@@ -178,33 +179,19 @@
             border-color: var(--blue);
         }
 
-        .nav-links a.nav-cta,
-        .nav-links a.nav-cta:hover {
-            border-bottom: none;
-            padding: 9px 18px;
-            font-size: 14px;
-        }
-
         .nav-links a.nav-cta {
-            color: #fff;
-        }
-
-        .nav-links a.nav-cta:hover {
-            color: #fff;
-            background: var(--teal);
-        }
-
-        .nav-cta {
             background: var(--blue);
             color: #fff;
             padding: 9px 18px;
+            border: none;
             border-radius: 100px;
             font-size: 14px;
             font-weight: 600;
             transition: transform .15s, background .15s;
         }
 
-        .nav-cta:hover {
+        .nav-links a.nav-cta:hover {
+            color: #fff;
             transform: translateY(-1px);
             background: var(--teal);
         }
@@ -216,6 +203,9 @@
             border-radius: 8px;
             padding: 8px 10px;
             font-size: 18px;
+            line-height: 1;
+            color: var(--text);
+            cursor: pointer;
         }
 
         @media (max-width:800px) {
@@ -231,17 +221,26 @@
                 gap: 0;
                 padding: 8px 20px 16px 20px;
                 transform: translateY(-130%);
-                transition: transform .25s ease;
+                visibility: hidden;
+                transition: transform .25s ease, visibility 0s linear .25s;
             }
 
             .nav-links.open {
                 transform: translateY(0);
+                visibility: visible;
+                transition: transform .25s ease;
             }
 
             .nav-links a {
                 width: 100%;
                 padding: 12px 0;
                 border-bottom: 1px solid var(--border);
+            }
+
+            .nav-links a.nav-cta {
+                width: auto;
+                margin-top: 12px;
+                padding: 10px 20px;
             }
 
             .nav-toggle {
@@ -309,6 +308,16 @@
             .hero h1 {
                 font-size: 36px;
             }
+        }
+
+        .hero-name {
+            display: block;
+            font-size: 0.42em;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            color: var(--text);
+            opacity: 0.75;
+            margin-bottom: 0.35em;
         }
 
         .hero h1 .accent {
@@ -420,7 +429,7 @@
             border-radius: 36px;
             overflow: hidden;
             border: 5px solid var(--surface);
-            box-shadow: 0 24px 60px rgba(18, 19, 28, 0.18);
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
         }
 
         .photo-frame img {
@@ -437,7 +446,7 @@
             border: 1px solid var(--border);
             padding: 9px 14px;
             border-radius: 12px;
-            box-shadow: 0 10px 24px rgba(18, 19, 28, 0.10);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
             font-size: 12.5px;
             font-weight: 600;
             display: flex;
@@ -507,6 +516,10 @@
             opacity: 0.16;
             z-index: 0;
             pointer-events: none;
+        }
+
+        section[id] {
+            scroll-margin-top: 72px;
         }
 
         section>.wrap {
@@ -583,7 +596,7 @@
         }
 
         .icon-violet {
-            background: #F1ECFF;
+            background: rgba(167, 139, 250, 0.14);
             color: var(--violet);
         }
 
@@ -725,12 +738,13 @@
             padding: 26px 26px 24px 26px;
             position: relative;
             overflow: hidden;
-            transition: transform .18s, box-shadow .18s;
+            transition: transform .18s, box-shadow .18s, border-color .18s;
         }
 
         .proj-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 16px 32px rgba(18, 19, 28, 0.08);
+            border-color: #34405A;
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35);
         }
 
         .proj-card::before {
@@ -797,6 +811,12 @@
             position: absolute;
             left: 0;
             color: var(--text-faint);
+        }
+
+        .proj-note {
+            font-size: 12px;
+            color: var(--text-faint);
+            margin-bottom: 12px;
         }
 
         .proj-tags {
@@ -988,7 +1008,7 @@
           "image": "https://younusalinahid.github.io/avatar.jpg",
           "jobTitle": "Full Stack Software Engineer",
           "email": "mailto:eng.yanahid@gmail.com",
-          "worksFor": {"@type": "Organization", "name": "Avanto VR Solution GmbH", "url": "https://avanto-vr.com/en/"},
+          "alumniOf": {"@type": "CollegeOrUniversity", "name": "Dhaka International University"},
           "knowsAbout": ["Java", "Spring Boot", "Microservices", "Angular", "React", "MySQL", "AWS", "Docker"],
           "sameAs": [
             "https://github.com/younusalinahid",
@@ -1006,9 +1026,6 @@
       ]
     }
     </script>
-    <style>
-        .hero-name { display:block; font-size:0.42em; font-weight:600; letter-spacing:0.02em; color:var(--text); opacity:0.75; margin-bottom:0.35em; }
-    </style>
 </head>
 
 <body>
@@ -1021,7 +1038,8 @@
                 <a href="#experience" data-target="experience">Experience</a>
                 <a href="#projects" data-target="projects">Projects</a>
                 <a href="#skills" data-target="skills">Skills</a>
-                <a href="#contact" data-target="contact" class="nav-cta" style="margin-top:8px;">Contact</a>
+                <a href="#education" data-target="education">Education</a>
+                <a href="#contact" data-target="contact" class="nav-cta">Contact</a>
             </nav>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false"
                 aria-controls="navLinks">☰</button>
@@ -1038,15 +1056,13 @@
                         <h1><span class="hero-name">Younus Ali Nahid</span>Building <span class="accent">full stack</span> software, end to end.</h1>
                         <p class="lead">
                             I'm Younus Ali Nahid — a software engineer who works comfortably on both sides of the stack:
-                            Spring
-                            Boot APIs
-                            and databases on the backend, Angular and React interfaces on the front. Currently building
-                            production features at <a href="https://avanto-vr.com/en/" target="_blank" rel="noopener"
+                            Spring Boot APIs and databases on the backend, Angular and React interfaces on the front.
+                            2 years of production experience at <a href="https://avanto-vr.com/en/" target="_blank" rel="noopener"
                                 style="color:var(--blue);text-decoration:underline;">Avanto VR Solution GmbH</a>.
                         </p>
                         <div class="hero-actions">
-                            <a class="btn btn-primary" id="downloadCvBtn" href="Younus_Ali_Nahid.pdf"
-                                download="Younus_Ali_Nahid.pdf">Download CV</a>
+                            <a class="btn btn-primary" id="viewCvBtn" href="Younus_Ali_Nahid.pdf"
+                                target="_blank" rel="noopener">View CV ↗</a>
                             <a class="btn btn-ghost" href="#projects" data-target="projects">View my work</a>
                             <a class="btn btn-ghost" href="#contact" data-target="contact">Get in touch</a>
                         </div>
@@ -1081,8 +1097,9 @@
                 <div class="section-head">
                     <div class="section-kicker">About</div>
                     <h2 class="section-title">Two sides, one engineer</h2>
-                    <p class="section-sub">A CSE student and working software engineer, equally at home designing an API
-                        and building the screen that calls it.</p>
+                    <p class="section-sub">A software engineer with 2+ years of production experience, equally at home
+                        designing an API and building the screen that calls it. Open to full stack and
+                        backend-focused roles.</p>
                 </div>
                 <div class="about-grid">
                     <div class="about-card">
@@ -1099,8 +1116,8 @@
                     </div>
                     <div class="about-card">
                         <div class="icon icon-violet">🎓</div>
-                        <h3>Currently</h3>
-                        <p>B.Sc. in CSE at Dhaka International University, graduating August 2026.</p>
+                        <h3>Education</h3>
+                        <p>B.Sc. in Computer Science and Engineering from Dhaka International University (2026).</p>
                     </div>
                 </div>
             </div>
@@ -1124,10 +1141,10 @@
                                     <div class="tl-company"><a href="https://avanto-vr.com/en/" target="_blank"
                                             rel="noopener" style="color:inherit;">Avanto VR Solution GmbH ↗</a></div>
                                 </div>
-                                <div class="tl-meta">Aug 2024 — Present · Remote</div>
+                                <div class="tl-meta">Aug 2024 — Aug 2026 · Remote</div>
                             </div>
                             <ul>
-                                <li>Owned end-to-end development of a new microservice, building 15+ REST APIs powering
+                                <li>Owned end-to-end development of a new microservice, building 10+ REST APIs powering
                                     iOS and Android apps for 3,000+ customers.</li>
                                 <li>Cut media upload API latency from ~1 minute to 5–10 seconds by migrating storage
                                     from local disk to Amazon S3, an 80% performance boost.</li>
@@ -1183,6 +1200,7 @@
                             <li>JWT-based authentication with role-based access control</li>
                             <li>Stock-warning alerts and review sentiment analysis</li>
                         </ul>
+                        <p class="proj-note">Live demo runs on a free tier and may take ~30s to wake up.</p>
                         <div class="proj-tags">
                             <span class="proj-tag">Spring Boot</span><span class="proj-tag">React</span><span
                                 class="proj-tag">MySQL</span><span class="proj-tag">JWT</span>
@@ -1193,7 +1211,7 @@
                         <div class="proj-top">
                             <div class="proj-title">E-commerce Application</div>
                             <div class="proj-links">
-                                <a class="proj-link" href="https://github.com/younusalinahid/e-commerce-application"
+                                <a class="proj-link" href="https://github.com/younusalinahid/E-commerce-springboot"
                                     target="_blank" rel="noopener">Code ↗</a>
                             </div>
                         </div>
@@ -1257,7 +1275,7 @@
                         <div class="proj-top">
                             <div class="proj-title">Student Result System</div>
                             <div class="proj-links">
-                                <a class="proj-link" href="https://github.com/younusalinahid/student-result-system"
+                                <a class="proj-link" href="https://github.com/younusalinahid/Student-Result-System"
                                     target="_blank" rel="noopener">Code ↗</a>
                             </div>
                         </div>
@@ -1273,7 +1291,7 @@
                         <div class="proj-top">
                             <div class="proj-title">Global Exception Handling</div>
                             <div class="proj-links">
-                                <a class="proj-link" href="https://github.com/younusalinahid/global-exception-handling"
+                                <a class="proj-link" href="https://github.com/younusalinahid/exception-handling"
                                     target="_blank" rel="noopener">Code ↗</a>
                             </div>
                         </div>
@@ -1334,8 +1352,12 @@
             </div>
         </section>
 
-        <section>
+        <section id="education">
             <div class="wrap">
+                <div class="section-head">
+                    <div class="section-kicker">Research &amp; Education</div>
+                    <h2 class="section-title">Beyond the day job</h2>
+                </div>
                 <div class="pe-grid">
                     <div class="pe-card">
                         <div class="pe-label">Publication</div>
@@ -1350,7 +1372,7 @@
                     <div class="pe-card">
                         <div class="pe-label">Education</div>
                         <h3>B.Sc. in Computer Science and Engineering</h3>
-                        <p>Dhaka International University · August 2026</p>
+                        <p>Dhaka International University · 2026</p>
                     </div>
                 </div>
             </div>
